@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang='en' xml:lang='en' xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta charset="utf-8" />
+<meta name="description" content="<Blogger><$BlogItemTitle$></Blogger>,<$BlogPageTitle$>,comics, webcomic" />
+<title><$BlogPageTitle$></title>
+<style>
+    *, html, body { font-family: Arial; } 
+    body { background: black url('http://i.imgur.com/0jLk8V7.png'); margin:0; }
+    a { color:blue; }
+    
+    #logo, #description { float:left; text-align:center; display:block; text-align:center; font-size:1.8em; margin:0 0 20px 0;}
+    #logo a { color:#333; text-decoration:none; padding:4px 8px 4px 8px; border:0px solid; border-radius:4px; margin:0}
+    #description { font-size: 20px; color: grey; }
+    
+    #cow { width: 800px; margin:10px auto; background:white; padding: 20px; border-radius:4px; }
+   
+    #post { clear:both; }
+
+    #title { background:#EEE; text-align:center;  line-height:1.8em; margin:0;padding:0; height:1.8em; border-radius:4px; }
+    a.title { background:white; text-align:center; font-size:1.8em; height:1.8em; padding:0 20px 0 20px; font-weight:bold; text-decoration:none; color: #666;margin:0;}
+
+    
+    #comic { text-align:center; margin-top:20px;}
+    
+    div#links { display:block; height:40px; float:right; margin-top:10px; font-size:.7em; }
+    #links ul { list-style:none; padding:0;margin:0; text-align:center; }
+    #links ul li { display: inline; padding:0 5px;}
+
+    .permalink { text-align: center; font-size: 14px; font-variant: small-caps; font-family: Lucida,Helvetica,sans-serif; font-weight: 500; }
+
+    div#pagi { margin:20px 0 20px 0;  text-align:center; }
+    #pagi a { font-weight:bold; text-decoration:none; background:blue; color:white; margin:0 15px 0 0; padding:4px 8px 4px 8px; border:0px solid; border-radius:4px;}
+    #pagi a:hover { background:black; }
+    
+    #footer { margin-top:60px; font-size:14px; color: black;  }
+</style>
+</head>
+
+<body>
+
+<div id="cow">
+
+    <div id="logo"><a href="http://www.negativerad.com">negativerad</a></div>
+
+    <div id="links">
+        <ul>
+            <li><a href="http://www.negativerad.com">Home</a></li>
+            <li><a href="http://www.reddit.com/user/negativerad/" target=_blank>Reddit</a></li>
+            <li><a href="http://ytmnd.com/users/negativerad/sites" target=_blank>YTMND</a></li>
+            <li><a href="http://www.negativerad.com/feeds/posts/default?alt=rss">RSS</a></li>
+        </ul>
+    </div>
+
+    <Blogger>
+    
+    <div id="post">
+
+        <div id="title">
+                <a href="<$BlogItemPermalinkURL$>" class="title"><$BlogItemTitle$></a>
+        </div>
+    
+        <div id="comic">
+        <!--  <OlderPosts><a href="<$OlderPosts$>"></OlderPosts> -->
+            <$BlogItemBody$>
+        <!--  <OlderPosts></a></OlderPosts> -->
+        </div>
+        
+        <div id="pagi">
+            <a href="<$NewerPosts$>">Newer Posts </a> 
+            <a href="http://www.negativerad.com">Home</a>
+            <OlderPosts> <a href="<$OlderPosts$>">Older Posts </a> </OlderPosts>
+            <br /><br />
+            <span class="permalink">PERMALINK TO THIS COMIC: <$BlogItemPermalinkURL$></span><br />
+            <span class="permalink">Image URL (for hotlinking/embedding): <span id="metaStrip"></span></span><br />
+        </div>
+        
+        <div id="disqus_thread"></div>
+        
+        <script type="text/javascript">
+            var disqus_shortname = 'negativerad'; 
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+    
+    </div></Blogger>
+
+    <div id="footer">Copyright &copy; negativerad 2014</div>
+
+    <script>
+        var strip_url = document.getElementById('strip').src;
+        var element = document.getElementById("metaStrip");
+        element.innerHTML = strip_url;
+    </script>
+
+</div>
+
+</body>
+</html>
